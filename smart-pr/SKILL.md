@@ -38,11 +38,11 @@ For each Trello card URL:
 
 ### Step 4: Analyze the Diff
 
-Run the following to understand what changed:
+Run the following to understand what changed (use `origin/{target}` to avoid failures when the target branch is not checked out locally):
 
 ```
-git log {target}..HEAD --oneline
-git diff {target}...HEAD --stat
+git log origin/{target}..HEAD --oneline
+git diff origin/{target}...HEAD --stat
 ```
 
 Use the commit history and file changes — along with the Trello card titles — to understand the purpose and scope of the changes.
